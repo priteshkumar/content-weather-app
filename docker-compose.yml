@@ -1,0 +1,12 @@
+version: '3'
+services:
+  weather-app:
+    container_name: weatherapp
+    build:
+      context: .
+      args:
+        - VERSION=v2.0
+    ports:
+      - "8081:3000"
+    environment:
+      - NODE_ENV=production
